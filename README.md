@@ -21,4 +21,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
+The base application includes the hotwire-livereload gem to make development really really nice. When you run bin/dev the application is launched in development mode and live-reload is enabled. Anytime a change is made to a view, or stylesheet, or javascript whatever...the browser (if you have one loaded on localhost) will automatically refresh with the new changes. This is a tiny miricle...nay...a major miricle. 
+
+## Getting Started
+
+Clone the repository
+run bin/setup (rename the app)
+run bin/dev 
+
 * ...
