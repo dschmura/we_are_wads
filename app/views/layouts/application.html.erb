@@ -16,6 +16,7 @@
 
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
+    <%=  render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?%>
       <%= yield %>
     </main>
   </body>
