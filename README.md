@@ -17,6 +17,9 @@ Things you may want to cover:
 
 * How to run the test suite
 
+This app uses rspec-rails for testing. 
+To run an individual test;
+
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
