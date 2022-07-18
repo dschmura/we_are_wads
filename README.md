@@ -3,26 +3,20 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
 This app uses rspec-rails for testing. 
-To run an individual test;
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting Started
 
-* Deployment instructions
+clone the repository to your development machine 
+```
+$ git clone git@github.com:dschmura/we_are_wads.git
+```
+```
+$ cd we_are_wads 
+$ bin/setup
+$ bin/dev
+```
+
 
 The base application includes the hotwire-livereload gem to make development really really nice. When you run bin/dev the application is launched in development mode and live-reload is enabled. Anytime a change is made to a view, or stylesheet, or javascript whatever...the browser (if you have one loaded on localhost) will automatically refresh with the new changes. This is a tiny miricle...nay...a major miricle. 
 
@@ -36,10 +30,3 @@ Other enhancements include;
 - accessability enhancements
   - missing_alt_tags: Images that do not have alt tags for accessability get highlighted in a garrish, but obvious way to call out that this is important to fix! < in development only>.
   
-## Getting Started
-
-Clone the repository
-run bin/setup (rename the app)
-run bin/dev 
-
-* ...
