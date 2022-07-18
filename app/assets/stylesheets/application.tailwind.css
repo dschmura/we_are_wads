@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+/* missing_alt_tags */
+body[data-environment="development"] img[alt=""], body[data-environment="development"] img:not([alt]) {
+  @apply border-4 border-red-700 border-dotted p-2; }
