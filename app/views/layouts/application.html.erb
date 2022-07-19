@@ -15,7 +15,9 @@
   </head>
 
   <body <%= "data-environment=#{Rails.env}" %> >
-    <main class="container mx-auto mt-28 px-5 flex">
+    <%= skip_links %>
+
+    <main class="container mx-auto mt-28 px-5 flex #{controller.controller_name}", id: "main">
     <%=  render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?%>
       <%= yield %>
     </main>
