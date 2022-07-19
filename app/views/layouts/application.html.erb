@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>WeAreWads</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,8 +16,9 @@
   </head>
 
   <body <%= "data-environment=#{Rails.env}" %> >
-    <main class="container mx-auto mt-28 px-5 flex">
-    <%=  render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?%>
+    <%= skip_links %>
+    <main class="container mx-auto mt-28 px-5 flex #{controller.controller_name}", id: "main">
+      <%=  render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?%>
       <%= yield %>
     </main>
   </body>
