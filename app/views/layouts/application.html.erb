@@ -24,12 +24,16 @@
         <li> <%= link_to "Home", root_path %> </li>
         <li> <%= link_to "About Us", about_path %> </li>
         <li> <%= link_to "Contact Us", contact_path %> </li>
+
+        <li> <%= link_to "Sign In", new_user_session_path %> </li>
+        <li> <%= button_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
       </ul> 
     </nav>
 
     <main class="px-10 mx-auto mt-28  #{controller.controller_name}", id: "main">
       <%=  render 'layouts/utilities/tailwindcss_breakpoints' unless Rails.env.production?%>
       <%= yield %>
+  
     </main>
   </body>
 </html>
