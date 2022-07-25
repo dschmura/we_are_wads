@@ -85,9 +85,11 @@
               <!-- Active: "bg-gray-100", Not Active: "" -->
               <a href="#" class="block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
               <a href="#" class="block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-
-              <%= link_to "Sign in", new_user_session_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" %>
-              <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" %>  
+              <%- if current_user %>
+                <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" %>
+              <%- else  %>  
+                <%= link_to "Sign in", new_user_session_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" %>
+              <% end %> 
             </div>
         </div>
       </div>
