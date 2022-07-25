@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get :contact
     get :index
     get :privacy
+    get :team 
+    get :projects
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+
+  def projects
+  end
+
+  def team
+  end
 end
