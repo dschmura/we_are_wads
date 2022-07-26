@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :twitadvices
+  resources :hobbies
+  resources :quirks
+  resources :profiles
   devise_for :users
 
   scope controller: :static_pages do
