@@ -1,11 +1,11 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-slate-700 " data-controller="dropdown">
+<nav class="bg-slate-700" data-controller="dropdown">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-between h-16">
+    <div class="relative flex items-center justify-between h-16 ">
 
 
 
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden ">
 
         <!-- Mobile menu button-->
         <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" 
@@ -42,20 +42,22 @@
 
 
       
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start sm:justify-between" >
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start sm:justify-between " >
         <%=link_to root_path do %>
           <div class="flex-shrink-0 flex text-sky-50 hover:text-sky-300">
 
             <%= inline_svg_tag("we_are_wads_mark2", desc: "Web & Application Development Services", alt: "Web & Application Development Services", class: "block  h-8 fill-current text-yellow-500  hover:text-yellow-400 group-hover:text-yellow-600 ") %>
-            <span aria-hidden="true" class="text-2xl pl-2 sm:pl-3 ">W</span>
-            <span aria-hidden="true" class="hidden lg:block  text-2xl align-text-bottom ">eb</span>
-            <span aria-hidden="true" class="text-md font-extrabold text-yellow-500  hover:text-yellow-400  group-hover:text-yellow-400 pl-1  lg:text-2xl font-mono">&</span>
-            <span aria-hidden="true" class="text-2xl lg:pl-1">A</span>
-            <span aria-hidden="true" class="hidden lg:block  text-2xl ">pplication</span>
-            <span aria-hidden="true" class="text-2xl lg:pl-1 ">D</span>
-            <span aria-hidden="true" class="hidden lg:block  text-2xl ">evelopment</span>
-            <span aria-hidden="true" class="text-2xl lg:pl-1    ">S</span>
-            <span aria-hidden="true" class="hidden lg:block  text-2xl ">ervices</span>
+             
+                <span aria-hidden="true" class="text-2xl pl-2 sm:pl-3">W</span>
+                <span aria-hidden="true" class="hidden lg:block  text-2xl align-text-bottom ">eb</span>
+                <span aria-hidden="true" class="text-2xl lg:text-lg font-light text-yellow-500  hover:text-yellow-400  group-hover:text-yellow-400 lg:pl-1">&</span>
+                <span aria-hidden="true" class="text-2xl lg:pl-1">A</span>
+                <span aria-hidden="true" class="hidden lg:block  text-2xl ">pplication</span>
+                <span aria-hidden="true" class="text-2xl lg:pl-1 ">D</span>
+                <span aria-hidden="true" class="hidden lg:block  text-2xl ">evelopment</span>
+                <span aria-hidden="true" class="text-2xl lg:pl-1    ">S</span>
+                <span aria-hidden="true" class="hidden lg:block  text-2xl ">ervices</span>
+ 
           </div>
         <% end %>
         <div class="hidden sm:block sm:ml-6">
@@ -101,9 +103,7 @@
               <!-- Active: "bg-gray-100", Not Active: "" -->
 
               <%= link_to "Your Profile", edit_user_registration_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-0" %>
-              <%= link_to "** SETTINGS ", edit_user_registration_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
-
-              <a href="#" class="block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+              <%= link_to "Settings", edit_user_registration_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
               
                 <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700" %>
               <%- else  %>  

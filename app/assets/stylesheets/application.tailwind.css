@@ -8,3 +8,8 @@ body[data-environment="development"] img[alt=""], body[data-environment="develop
 
 .skip-to-content-link{
   @apply sr-only font-bold text-2xl text-white focus-visible:not-sr-only focus-within:bg-green-700 relative self-center flex justify-center focus-within:p-5 focus-within:underline; }
+
+body{
+    font-family: 'Raleway';
+
+  }
