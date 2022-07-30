@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, path: "accounts"
+
+  resources :users do
+    resources :quirks
+  end
 
   scope controller: :static_pages do
     get :about
