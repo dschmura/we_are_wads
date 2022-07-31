@@ -15,12 +15,9 @@
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this quirk", user_path(@user), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%
-=begin%>
- <%= link_to 'Edit this quirk', user_quirk_edit_path(@user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %> 
-<%
-=end%>
+    <%= link_to "Show this quirk", user_quirk_path(@user, quirk), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+    <%= link_to 'Edit this quirk', edit_user_quirk_path(@user, quirk), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %> 
     <hr class="mt-6">
   <% end %>
 </div>

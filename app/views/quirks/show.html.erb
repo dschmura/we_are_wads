@@ -6,10 +6,14 @@
 
     <%= render @quirk %>
 
-    <%= link_to 'Edit this quirk', edit_quirk_path(@quirk), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%
+=begin%>
+ <%= link_to 'Edit this quirk', edit_user_quirk_path(@user, @quirk), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %> 
+<%
+=end%>
     <div class="inline-block ml-2">
-      <%= button_to 'Destroy this quirk', quirk_path(@quirk), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to 'Destroy this quirk', user_quirk_path(@user, @quirk), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
-    <%= link_to 'Back to quirks', quirks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Back to quirks', user_quirks_path(@user), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

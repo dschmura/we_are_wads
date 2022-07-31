@@ -6,4 +6,11 @@ class User < ApplicationRecord
 
   has_many :quirks, dependent: :destroy
   accepts_nested_attributes_for :quirks
+
+  has_many :biographies, dependent: :destroy
+  accepts_nested_attributes_for :biographies
+
+
+  
 end
+

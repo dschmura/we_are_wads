@@ -1,0 +1,29 @@
+<div id="<%= dom_id biography %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= biography.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Work focus:</strong>
+    <%= biography.work_focus %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Joining umich story:</strong>
+    <%= biography.joining_umich_story %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= biography.user_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this biography", user_biography_path(@user, biography), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+    <%= link_to 'Edit this biography', edit_user_biography_path(@user, biography), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %> 
+
+    <hr class="mt-6">
+  <% end %>
+</div>

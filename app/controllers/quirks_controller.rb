@@ -1,6 +1,6 @@
 class QuirksController < ApplicationController
-  before_action :set_quirk, only: %i[ show edit update destroy ]
   before_action :set_user
+  before_action :set_quirk, only: %i[ show edit update destroy ]
   
   # GET /quirks or /quirks.json
   def index
@@ -9,6 +9,7 @@ class QuirksController < ApplicationController
 
   # GET /quirks/1 or /quirks/1.json
   def show
+    
   end
 
   # GET /quirks/new
@@ -26,7 +27,7 @@ class QuirksController < ApplicationController
 
     respond_to do |format|
       if @quirk.save
-        format.html { redirect_to user_path(@user), notice: "Quirk was successfully created." }
+        format.html { redirect_to user_quirks_path(@user), notice: "Quirk was successfully created." }
         format.json { render :show, status: :created, location: @quirk }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +40,7 @@ class QuirksController < ApplicationController
   def update
     respond_to do |format|
       if @quirk.update(quirk_params)
-        format.html { redirect_to user_quirk_path(@quirk), notice: "Quirk was successfully updated." }
+        format.html { redirect_to user_quirks_path(@quirk), notice: "Quirk was successfully updated." }
         format.json { render :show, status: :ok, location: @quirk }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,20 +54,21 @@ class QuirksController < ApplicationController
     @quirk.destroy
 
     respond_to do |format|
-      format.html { redirect_to quirks_url, notice: "Quirk was successfully destroyed." }
+      format.html { redirect_to user_quirks_url, notice: "Quirk was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = current_user
+    end
+    
     def set_quirk
       @quirk = @user.quirks.find(params[:id])
     end
 
-    def set_user
-      @user = User.find(params[:user_id])
-    end
 
     # Only allow a list of trusted parameters through.
     def quirk_params

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-
+  
   devise_for :users, path: "accounts"
-
+  
   resources :users do
+    resources :biographies
     resources :quirks
   end
 
