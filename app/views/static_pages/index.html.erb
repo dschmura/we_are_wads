@@ -1,2 +1,28 @@
+<!-- <h1 class="font-bold text-4xl">About W&ADS</h1>
+<div class="w-full h-full object-center object-cover">
+  <%= link_to image_tag(asset_path('cube.jpg', class: "h-5/6"), alt: "#{(t :sitename)} Logo, link to home page.", id: root_path(anchor: 'page-bottom')), root_path, tabindex: '-1'  %>
+</div>
+<p class="text-4xl">bruh</p> -->
 
-<h1 class="font-bold text-4xl">LANDING PAGE </h1>
+<div class="relative overflow-hidden -mx-10 -mt-4">
+  <div aria-hidden="true" class="absolute inset-0">
+    <div class="absolute inset-0 max-w-7xl mx-auto overflow-hidden xl:px-8">
+      <div class="w-full h-full object-center object-cover">
+        <%= link_to image_tag(asset_path('cube.jpg', class: "h-5/6"), alt: "#{(t :sitename)} Logo, link to home page.", id: root_path(anchor: 'page-bottom')), root_path, tabindex: '-1' %>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-white bg-opacity-25"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+  </div>
+  <section aria-labelledby="sale-heading" class="relative max-w-7xl mx-auto px-20 pt-32 px-4 flex flex-col items-center text-center sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto lg:max-w-none">
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl" id="sale-heading">
+        About W&ADS
+      </h1>
+      <p class="mt-4 max-w-xl md:max-w-3xl mx-auto text-xl text-gray-600">
+        The Web & Application Development Services Team (W&ADS) within LSA Technology Services develops and supports a variety of LSA Websites across different technologies, such as Ruby on Rails, WordPress, PHP, and more. We further provide and maintain administrative information systems on behalf of LSA for faculty, staff, and students.
+      </p>
+    </div>
+  </section>
+</div>
+
