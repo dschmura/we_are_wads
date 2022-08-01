@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'actiontext.css';
 
 /* missing_alt_tags */
 body[data-environment="development"] img[alt=""], body[data-environment="development"] img:not([alt]) {
@@ -11,5 +12,4 @@ body[data-environment="development"] img[alt=""], body[data-environment="develop
 
 body{
     font-family: 'Raleway';
-
-  }@import 'actiontext.css';
+  }
