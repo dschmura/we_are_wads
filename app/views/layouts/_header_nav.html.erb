@@ -106,6 +106,7 @@
               <%= link_to "Settings", edit_user_registration_path, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
               <%= link_to "Biographies", user_biographies_path(current_user), class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
               <%= link_to "Quirks", user_quirks_path(current_user), class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
+              <%= link_to "Hobbies", user_hobbies_path(current_user), class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700", role: "menuitem",  tabindex: "-1", id: "user-menu-item-1" %>
 
 
                 <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "block hover:text-slate-400 px-4 py-2 text-sm text-gray-700 mt-2 -mb-1 hover:text-red-700 hover:bg-red-100 w-full text-start" %>
