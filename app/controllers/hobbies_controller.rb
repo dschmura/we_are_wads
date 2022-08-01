@@ -22,7 +22,7 @@ class HobbiesController < ApplicationController
 
   # POST /hobbies or /hobbies.json
   def create
-    @hobby = @users.hobby.new(hobby_params)
+    @hobby = @user.hobbies.new(hobby_params)
 
     respond_to do |format|
       if @hobby.save
