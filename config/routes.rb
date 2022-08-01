@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, path: "accounts"
   
   resources :users do
     resources :biographies
     resources :quirks
+    resources :hobbies
   end
 
   scope controller: :static_pages do
